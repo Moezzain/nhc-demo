@@ -2,7 +2,7 @@ import Image from 'next/image'
 
 export default function AboutPage() {
     return (
-      <div className="container mx-auto px-4 py-8">
+      <div className="container mx-auto px-4 py-8 mb-24">
         <div className="max-w-[1000px] mx-auto">
           <div className="flex justify-center mb-8">
             <Image src="/assets/images/logo.svg" alt="Logo" width={241.87} height={250} />

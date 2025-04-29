@@ -16,7 +16,7 @@ export default function Header() {
           <Link
             href="/products"
             style={{
-              color: pathname === '/products' ? '#285F9D' : 'black'
+              color: pathname.includes('/products') ? '#285F9D' : 'black'
             }}
             className="hover:text-gray-400 text-[16px] font-['Abel']"
           >
@@ -25,7 +25,7 @@ export default function Header() {
           <Link
             href="/about"
             style={{
-              color: pathname === '/about' ? '#285F9D' : 'black'
+              color: pathname.includes('/about') ? '#285F9D' : 'black'
             }}
             className="hover:text-gray-400 text-[16px] font-['Abel']"
           >

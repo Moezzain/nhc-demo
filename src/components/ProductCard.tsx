@@ -27,7 +27,7 @@ export default function ProductCard({ product }: { product: Product }) {
         <h3 className="font-['Inter'] text-[18px] leading-[100%] text-[#285F9D] font-[400]">
           {product.title}
         </h3>
-        <p className="font-['Inter'] font-normal text-[14px] leading-[100%] text-[#7F7F7F] line-clamp-2 font-[400]">
+        <p className="font-['Inter'] font-normal text-[14px] leading-[100%] text-[#7F7F7F] line-clamp-2 font-[400] mb-6">
           {product.description}
         </p>
         <div className="flex items-center justify-between">

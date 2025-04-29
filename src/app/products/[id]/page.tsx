@@ -1,6 +1,5 @@
 import StarRating from "@/components/StarRating"
 import Image from "next/image"
-import { use } from "react";
 
 async function getProduct(id: string) {
     const res = await fetch(`https://dummyjson.com/products/${id}`)
@@ -22,9 +21,9 @@ async function getProduct(id: string) {
             <Image
               src={product.thumbnail}
               alt={product.title}
-              width={474}
+              width={350}
               height={250}
-              className="rounded-[10px] "
+              className="rounded-[10px]"
             />
           </div>
   
@@ -77,8 +76,9 @@ async function getProduct(id: string) {
                 <Image
                   src={image}
                   alt={`${product.title} ${index + 1}`}
-                  fill
-                  className="object-cover rounded-lg"
+                  width={218}
+                  height={200}
+                  className="rounded-lg w-[218px] h-[200px]"
                 />
               </div>
             ))}
