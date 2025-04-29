@@ -13,24 +13,24 @@ interface Product {
 
 export default function ProductCard({ product }: { product: Product }) {
   return (
-    <Card className="shadow-[0px_4px_13px_0px_#00000040] overflow-hidden w-[301px] h-[312px] gap-1 py-2 justify-between rounded-[10px]">
+    <Card className="shadow-[0px_4px_13px_0px_#00000040] overflow-hidden w-full min-h-[312px] gap-1 py-2 justify-between rounded-[10px] flex flex-col">
       <div className="aspect-video relative p-1">
         <Image
           src={product.thumbnail}
           alt={product.title}
           width={285}
           height={150}
-          className="w-[285px] h-[150px] object-cover"
+          className="w-full h-[150px] object-cover"
         />
       </div>
-      <CardContent className="px-3 space-y-2">
-        <h3 className="font-['Inter'] text-[18px] leading-[100%] text-[#285F9D] font-[400]">
+      <CardContent className="px-3 space-y-2 flex-1 flex flex-col">
+        <h3 className="font-['Inter'] text-[18px] leading-[120%] text-[#285F9D] font-[400] line-clamp-2">
           {product.title}
         </h3>
-        <p className="font-['Inter'] font-normal text-[14px] leading-[100%] text-[#7F7F7F] line-clamp-2 font-[400] mb-6">
+        <p className="font-['Inter'] font-normal text-[14px] leading-[120%] text-[#7F7F7F] line-clamp-2 font-[400]">
           {product.description}
         </p>
-        <div className="flex items-center justify-between">
+        <div className="flex items-center justify-between mt-auto pt-2">
           <p className="font-['Inter'] font-normal text-[16px] leading-[100%]">
             Price: <span className="text-[#285F9D]">${product.price}</span>
           </p>

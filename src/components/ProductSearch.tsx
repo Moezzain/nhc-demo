@@ -110,9 +110,11 @@ export default function ProductSearch() {
                 ) : hasSearched ? (
                     products.length > 0 ? (
                         <div className="w-full max-w-5xl mt-6">
-                            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 auto-rows-auto">
                                 {products.map((product) => (
-                                    <ProductCard key={product.id} product={product} />
+                                    <div key={product.id} className="flex justify-center">
+                                        <ProductCard product={product} />
+                                    </div>
                                 ))}
                             </div>
                         </div>
